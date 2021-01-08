@@ -12,7 +12,8 @@ AddEventHandler('ms-scripts:objid', function()
                 local coords = GetEntityCoords(entity)     
                 local heading = GetEntityHeading(entity)   
                 local model = GetEntityModel(entity)                               
-                TriggerServerEvent('ms-scripts:objid:sendtodis', coords, heading, model)
+                local rotation = GetEntityRotation(entity)
+                TriggerServerEvent('ms-scripts:objid:sendtodis', coords, heading, model, rotation)
             end
             Wait(5)                                           
          end                                             
