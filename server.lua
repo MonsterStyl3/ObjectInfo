@@ -1,7 +1,7 @@
 Webhook = ''
 RegisterServerEvent('ms-scripts:objid:sendtodis')
-AddEventHandler('ms-scripts:objid:sendtodis', function(coords, heading, model)
-    sendToDiscord(16753920, "Object Info", "Coords : " .. coords .. "\nHeading : " .. heading .. "\nModel : " .. model , "ms-scripts")
+AddEventHandler('ms-scripts:objid:sendtodis', function(coords, heading, model, rotation)
+    sendToDiscord(16753920, "Object Info", "Coords : " .. coords .. "\nHeading : " .. heading .. "\nModel : " .. model .. "\nRotation : " .. rotation , "ms-scripts")
 end)
 
 
